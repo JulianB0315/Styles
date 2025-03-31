@@ -1,0 +1,895 @@
+/* 1. Imports
+========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 3. Global Styles
+========================================================= */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 4. Navigation & Offcanvas
+========================================================= */
+/* Navbar Gradient */
+.navbar-gradient .navbar-brand,
+.navbar-gradient .navbar-toggler {
+    color: var(--light-color);
+}
+
+/* Offcanvas header gradient */
+.offcanvas-header {
+    padding: 1rem 2rem;
+}
+
+.offcanvas-title {
+    font-size: 2rem;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+/* Nav item hover effects with animated line */
+.offcanvas.offcanvas-end .nav-link {
+    position: relative;
+    padding: 10px 0;
+    margin: 10px 15px;
+    font-size: 1.5rem; 
+    font-weight: 500; 
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.offcanvas.offcanvas-end .nav-link i {
+    font-size: 1.3rem; 
+    margin-right: 10px; 
+}
+
+.offcanvas.offcanvas-end .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+}
+
+/* Custom close button styling */
+.btn-close.text-reset {
+    opacity: 1;
+}
+
+/* Create a custom X with ::before and ::after */
+.btn-close.text-reset:hover::before,
+.btn-close.text-reset:hover::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 2px;
+}
+
+.btn-close.text-reset:hover::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn-close.text-reset:hover::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* 5. Hero Section
+========================================================= */
+.hero-section {
+    font-family: 'Libre Franklin', sans-serif;
+    padding: 40px 0;
+}
+
+.hero-section .carousel-inner {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.hero-section .carousel-item {
+    min-height: 450px;
+}
+
+.hero-section .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    max-height: 450px;
+}
+
+.hero-section .hero-text {
+    padding: 20px;
+}
+
+.hero-section h2 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+.hero-section .display-4 {
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 4.5rem;
+    margin: 10px 0 20px;
+}
+
+.hero-section .lead {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+/* Make carousel controls stand out better */
+.hero-section .carousel-control-prev,
+.hero-section .carousel-control-next {
+    width: 5%;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-section .carousel-control-prev {
+    left: 10px;
+}
+
+.hero-section .carousel-control-next {
+    right: 10px;
+}
+
+.hero-section .carousel-indicators {
+    bottom: -40px;
+}
+
+.hero-section .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+/* 6. Mission & Vision
+========================================================= */
+.mission-vision-section {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.mission-card, .vision-card {
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.mission-card {
+    border-left: 5px solid var(--secondary-color);
+}
+
+.vision-card {
+    border-left: 5px solid var(--accent-color);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+}
+
+.mission-text, .vision-text {
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* 7. Showcase Carousel
+========================================================= */
+.showcase-section {
+    font-family: 'Libre Franklin', sans-serif;
+    padding: 30px 0;
+}
+
+.carousel-item {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-caption {
+    border-radius: 10px;
+    padding: 20px;
+    bottom: 20%;
+}
+
+.carousel-caption h2 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.carousel-caption .display-4 {
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 4.5rem;
+    margin: 10px 0;
+}
+
+.carousel-caption .lead {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+/* Common carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+/* Fix for carousel animations */
+.carousel-item {
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-item:not(.active) {
+    display: none;
+}
+
+/* Typography - Gradient Titles
+========================================================= */
+h1, h2, h3, h4, h5, h6,
+.section-title {
+    font-family: 'Nanum Pen Script', cursive;
+    font-weight: 600;
+}
+
+/* Section titles with gradient */
+.section-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-heading h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+}
+
+/* Products Cards
+========================================================= */
+.products-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 80px 0;
+}
+
+.products-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.products-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.products-section .section-heading h2::after {
+    background: var(--light-color);
+}
+
+.products-section .card {
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.products-section .card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+.products-section .card-body {
+    padding: 1.25rem;
+}
+
+.products-section .card-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.products-section .card-text {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.products-section .btn-primary {
+    padding: 0.5rem 1rem;
+}
+
+/* Why Us Accordion Styling
+========================================================= */
+.why-us-accordion .accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.why-us-accordion .accordion-button {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 20px 25px;
+}
+
+.why-us-accordion .accordion-button:not(.collapsed) {
+    box-shadow: none;
+}
+
+.why-us-accordion .accordion-body {
+    padding: 25px;
+}
+
+.why-us-accordion .accordion-body p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Blog Section with Video Background
+========================================================= */
+.blog-section {
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.blog-video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.blog-video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.blog-video-background .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.blog-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.blog-section .section-heading h2::after {
+    background: var(--light-color);
+}
+
+/* Blog Cards Animation and Styling */
+.blog-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    height: 100%;
+}
+
+.blog-card .card-img-container {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+}
+
+.blog-card .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-card .card-img-overlay-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    z-index: 1;
+}
+
+.blog-card .card-body {
+    padding: 25px;
+    position: relative;
+}
+
+.blog-card .card-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.blog-card .card-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.blog-category {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.blog-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+.blog-date {
+    font-size: 0.9rem;
+}
+
+.blog-link {
+    font-weight: 600;
+    padding: 0;
+    text-decoration: none;
+}
+
+.blog-link i {
+    margin-left: 5px;
+}
+
+/* FAQ Section Styling
+========================================================= */
+.faq-section {
+    position: relative;
+    padding: 80px 0;
+}
+
+.faq-section .section-heading {
+    margin-bottom: 3rem;
+}
+
+.faq-section .accordion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-section .accordion-item {
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.faq-section .accordion-button {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 20px 25px;
+    position: relative;
+}
+
+.faq-section .accordion-button:focus {
+    box-shadow: none;
+}
+
+.faq-section .accordion-button::after {
+    background-size: 16px;
+}
+
+.faq-section .accordion-body {
+    padding: 25px 30px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.faq-icon {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.faq-category {
+    margin-bottom: 30px;
+}
+
+.faq-category-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+faq-category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+}
+
+.faq-category-description {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+/* Contact Section Styling
+========================================================= */
+.contact-section {
+    position: relative;
+    padding: 80px 0;
+}
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 200px;
+    opacity: 0.03;
+    z-index: 0;
+}
+
+.contact-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-form {
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.contact-form .form-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.contact-form .form-control {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 12px 15px;
+}
+
+.contact-form .btn-primary {
+    border: none;
+    padding: 12px 25px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.contact-map {
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    min-height: 450px;
+}
+
+.contact-map iframe {
+    height: 100%;
+    min-height: 450px;
+}
+
+.contact-info {
+    margin-top: 50px;
+}
+
+.contact-card {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+}
+
+.contact-card .contact-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+.contact-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    margin-bottom: 15px;
+}
+
+.contact-card .btn-outline-primary {
+    border-radius: 30px;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+}
+
+/* Footer Styling
+========================================================= */
+.footer {
+    padding: 70px 0 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+}
+
+.footer-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: url('img/footer-wave.svg') repeat-x;
+    transform: translateY(-95%);
+}
+
+.footer-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-about {
+    margin-bottom: 30px;
+}
+
+.footer-about p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.footer-heading {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.footer-links i {
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-social {
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer-contact-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.newsletter-form {
+    position: relative;
+    margin-top: 20px;
+}
+
+.newsletter-input {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.newsletter-input:focus {
+    outline: none;
+}
+
+.newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 9. Media Queries
+========================================================= */
+@media (max-width: 767px) {
+    .hero-section .hero-text {
+        padding: 20px 10px;
+    }
+    
+    .hero-section .display-4 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-section .carousel-item {
+        min-height: auto;
+    }
+}

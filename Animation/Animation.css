@@ -1,0 +1,152 @@
+/* Animations
+========================================================= */
+
+/* Keyframes Definitions
+--------------------------------------------------------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 50px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(-50px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(50px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Carousel Animations
+--------------------------------------------------------- */
+.carousel-item.active img {
+    animation: fadeInRight 1s ease forwards;
+}
+
+.carousel-item.active .hero-text h2,
+.carousel-item.active .carousel-caption h2 {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.carousel-item.active .hero-text .display-4,
+.carousel-item.active .carousel-caption .display-4 {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.carousel-item.active .hero-text .lead,
+.carousel-item.active .carousel-caption .lead {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.7s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.carousel-item.active .hero-text a,
+.carousel-item.active .carousel-caption a {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.9s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Showcase Carousel Animations
+--------------------------------------------------------- */
+.showcase-section .carousel-item.active img {
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.showcase-section .carousel-caption {
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Blog Cards Animation
+--------------------------------------------------------- */
+.animate-card {
+    animation: slideInUp 0.8s ease forwards;
+}
+
+.animate-card-delay {
+    animation: slideInUp 0.8s ease 0.3s forwards;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Contact Section Animations
+--------------------------------------------------------- */
+.contact-anim {
+    animation: fadeInFromBottom 0.8s ease forwards;
+}
+
+.contact-anim-delay-1 {
+    animation: fadeInFromBottom 0.8s 0.2s ease forwards;
+    opacity: 0;
+}
+
+.contact-anim-delay-2 {
+    animation: fadeInFromBottom 0.8s 0.4s ease forwards;
+    opacity: 0;
+}
+
+.contact-anim-delay-3 {
+    animation: fadeInFromBottom 0.8s 0.6s ease forwards;
+    opacity: 0;
+}
