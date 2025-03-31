@@ -1,0 +1,135 @@
+/* Hover Effects
+========================================================= */
+
+/* Navigation & Offcanvas Hover
+--------------------------------------------------------- */
+.offcanvas.offcanvas-end .nav-link:hover {
+    color: var(--accent-color);
+}
+
+.offcanvas.offcanvas-end .nav-link:hover i {
+    color: var(--accent-color);
+}
+
+.offcanvas.offcanvas-end .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+.btn-close.text-reset:hover {
+    filter: none; 
+    background-color: transparent;
+    color: var(--red-color);
+    transform: scale(1.2);
+    position: relative;
+}
+
+/* Cards Hover
+--------------------------------------------------------- */
+.mission-card:hover, .vision-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.products-section .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.products-section .card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.blog-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.blog-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.contact-map:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Button Hover
+--------------------------------------------------------- */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.products-section .btn-primary:hover {
+    background: linear-gradient(135deg, var(--tertiary-color), var(--accent-color));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.why-us-accordion .btn-outline-primary:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+.blog-link:hover {
+    color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+.blog-link:hover i {
+    transform: translateX(5px);
+}
+
+.contact-form .btn-primary:hover {
+    background: linear-gradient(135deg, var(--tertiary-color), var(--accent-color));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(1, 152, 218, 0.3);
+}
+
+.contact-card .btn-outline-primary:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--tertiary-color));
+    color: var(--light-color);
+    border-color: transparent;
+}
+
+.newsletter-btn:hover {
+    background: var(--accent-color);
+    transform: translateX(3px);
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Accordion Hover
+--------------------------------------------------------- */
+.faq-section .accordion-item:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Footer Hover
+--------------------------------------------------------- */
+.footer-links a:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.social-icon:hover {
+    background: var(--accent-color);
+    color: var(--light-color);
+    transform: translateY(-5px);
+}
