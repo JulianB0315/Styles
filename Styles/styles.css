@@ -2,7 +2,17 @@
 ========================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nanum+Pen+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
-
+:root {
+    --secondary-color: #3e4091;
+    --tertiary-color: #295aac;
+    --accent-color: #0198da;
+    --background-color: #fefeff;
+    --back-color: #f8f8f8;
+    --light-color: #ffffff;
+    --text-color: #333333;
+    --dark-color: #000000;
+    --red-color: #e60000;
+}
 /* 3. Global Styles
 ========================================================= */
 html {

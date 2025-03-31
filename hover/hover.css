@@ -1,6 +1,16 @@
 /* Hover Effects
 ========================================================= */
-
+:root {
+    --secondary-color: #3e4091;
+    --tertiary-color: #295aac;
+    --accent-color: #0198da;
+    --background-color: #fefeff;
+    --back-color: #f8f8f8;
+    --light-color: #ffffff;
+    --text-color: #333333;
+    --dark-color: #000000;
+    --red-color: #e60000;
+}
 /* Navigation & Offcanvas Hover
 --------------------------------------------------------- */
 .offcanvas.offcanvas-end .nav-link:hover {
