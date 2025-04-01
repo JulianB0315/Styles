@@ -1,0 +1,481 @@
+/* ===== CSS ANIMATIONS AND HOVER EFFECTS ===== */
+
+/* CSS-Only Animation Utilities */
+.animate-on-scroll {
+    position: relative;
+    animation: fadeIn 1s ease forwards;
+}
+
+.animate-left {
+    animation: slideInLeft 1s ease forwards;
+}
+
+.animate-right {
+    animation: slideInRight 1s ease forwards;
+}
+
+.animate-scale {
+    animation: scaleIn 1s ease forwards;
+}
+
+/* Basic Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Image hover animations */
+.img-hover-effect {
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.img-hover-effect:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Service features animation */
+.service-features .feature-item {
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.service-features .feature-item:hover {
+    transform: translateX(10px);
+    background-color: rgba(252, 218, 57, 0.15);
+}
+
+/* Hero section animations */
+.avm-text {
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes text-focus-in {
+    0% {
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.hero-tagline {
+    animation: slide-in-bottom 0.8s ease-out 0.5s both;
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero-button {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Section title animation */
+.section-title:after {
+    animation: underlineGrow 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes underlineGrow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 60px;
+    }
+}
+
+/* Nav link animation */
+.bottom-navbar .nav-link {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.bottom-navbar .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.bottom-navbar .nav-link::after {
+    transition: width 0.3s ease;
+}
+
+.bottom-navbar .nav-link:hover::after {
+    width: 70%;
+}
+
+/* Services section hover effects */
+.service-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Team card animations */
+.team-image {
+    transition: transform 0.3s;
+}
+
+.team-card:hover .team-image {
+    transform: translateY(-8px);
+}
+
+.team-overlay {
+    transition: opacity 0.3s;
+}
+
+.team-card:hover .team-overlay {
+    opacity: 1;
+}
+
+.team-social-link {
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.team-social-link:hover {
+    transform: scale(1.1);
+    background-color: #f8f9fa;
+}
+
+/* Otros Subsection animations */
+.otros-subsection {
+    transition: transform 0.3s;
+}
+
+.otros-subsection img {
+    transition: transform 0.3s;
+}
+
+.otros-subsection:hover img {
+    transform: scale(1.03);
+}
+
+/* Enhanced Letretros Gráficos Animations */
+.letters-animate::before {
+    animation: letterUnderline 2s infinite;
+}
+
+@keyframes letterUnderline {
+    0% {
+        width: 0;
+        left: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+.animate-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: floatUp 0.8s forwards;
+}
+
+@keyframes floatUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-shadow-pulse {
+    animation: shadowPulse 3s infinite;
+}
+
+@keyframes shadowPulse {
+    0% {
+        box-shadow: 0 5px 15px rgba(252, 218, 57, 0.2);
+    }
+    50% {
+        box-shadow: 0 5px 25px rgba(252, 218, 57, 0.6);
+    }
+    100% {
+        box-shadow: 0 5px 15px rgba(252, 218, 57, 0.2);
+    }
+}
+
+.animate-in {
+    opacity: 0;
+    animation: fadeScale 0.8s forwards;
+}
+
+@keyframes fadeScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.floating-element {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.glow-text {
+    animation: textGlow 3s infinite;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(252, 218, 57, 0.1);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(252, 218, 57, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(252, 218, 57, 0.1);
+    }
+}
+
+.btn-animate {
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-animate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.3s ease;
+}
+
+.btn-animate:hover::after {
+    left: 100%;
+}
+
+.pulse-btn {
+    animation: btnPulse 2s infinite;
+}
+
+@keyframes btnPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Footer animations */
+.footer-brand img {
+    transition: transform 0.3s;
+}
+
+.footer-brand:hover img {
+    transform: scale(1.05);
+}
+
+.footer-links a {
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fcda39;
+    transform: translateX(5px);
+}
+
+.social-links a {
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #fcda39;
+    transform: translateY(-3px);
+}
+
+/* Stats and material cards */
+.stat-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.material-item .material-icon {
+    transition: transform 0.3s;
+}
+
+.material-item:hover .material-icon {
+    transform: scale(1.1);
+}
+
+/* Lettering style cards */
+.lettering-style-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lettering-style-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.lettering-preview img {
+    transition: transform 0.5s;
+}
+
+.lettering-style-card:hover .lettering-preview img {
+    transform: scale(1.1);
+}
+
+.lettering-overlay {
+    transition: opacity 0.3s;
+}
+
+.lettering-style-card:hover .lettering-overlay {
+    opacity: 1;
+}
+
+/* Process steps animations */
+.process-step {
+    transition: transform 0.3s;
+}
+
+.process-step:hover {
+    transform: translateY(-10px);
+}
+
+.step-icon {
+    transition: background-color 0.3s;
+}
+
+.process-step:hover .step-icon {
+    background-color: rgba(252, 218, 57, 0.3);
+}
+
+/* Material cards */
+.material-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.material-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom product thumbnails */
+.custom-thumbnail {
+    transition: all 0.3s;
+}
+
+.custom-thumbnail:hover {
+    transform: translateY(-5px);
+}
+
+/* Custom steps */
+.custom-step {
+    transition: transform 0.3s;
+}
+
+.custom-step:hover {
+    transform: translateY(-10px);
+}
+
+.step-circle {
+    transition: all 0.3s;
+}
+
+.custom-step:hover .step-circle {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(252, 218, 57, 0.5);
+}
+
+/* Contact form container */
+.contact-form-container {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
